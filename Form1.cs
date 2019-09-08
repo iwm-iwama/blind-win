@@ -12,7 +12,7 @@ namespace iwm_blind
 {
 	public partial class Form1 : Form
 	{
-		///private const string Ver = "iwm20190416";
+		///private const string Ver = "iwm20190908";
 
 		public Form1()
 		{
@@ -72,8 +72,7 @@ namespace iwm_blind
 			}
 		}
 
-		private const int GblHeighttMin = 50;
-		private int GblHeighttMax = 0;
+		private int GblHeightMax = 0;
 
 		private void Form1_DoubleClick(object sender, EventArgs e)
 		{
@@ -83,36 +82,31 @@ namespace iwm_blind
 				return;
 			}
 
-			if (Height > GblHeighttMin)
+			if (Height > MinimumSize.Height)
 			{
-				GblHeighttMax = Height;
-				Height = GblHeighttMin;
+				GblHeightMax = Height;
+				Height = MinimumSize.Height;
 			}
 			else
 			{
-				Height = GblHeighttMax;
+				Height = GblHeightMax;
 			}
 		}
 
 		private void Cms1_背景色_Click(object sender, EventArgs e)
 		{
-			ColorDialog CD = new ColorDialog
+			using (ColorDialog CD = new ColorDialog
 			{
 				Color = BackColor,
 				AllowFullOpen = true,
 				SolidColorOnly = true,
-				CustomColors = new int[]
-				{
-					0x0000ff, 0x0000cc, 0x000099, 0x000066,
-					0x00ff00, 0x00cc00, 0x009900, 0x006600,
-					0xff0000, 0xcc0000, 0x990000, 0x660000,
-					0x00ffff, 0xffff00, 0xff00ff, 0x000000
-				}
-			};
-
-			if (CD.ShowDialog() == DialogResult.OK)
+				CustomColors = new int[] { }
+			})
 			{
-				BackColor = CD.Color;
+				if (CD.ShowDialog() == DialogResult.OK)
+				{
+					BackColor = CD.Color;
+				}
 			}
 		}
 
@@ -130,10 +124,10 @@ namespace iwm_blind
 		// 関数
 		//-------
 		private void SubBgBlind(
-			double level = 0.6
+			double level = 0.5
 		)
 		{
-			if (level > 1.0)
+			if (level > 1.01)
 			{
 				level = 0.1;
 			}
@@ -147,12 +141,12 @@ namespace iwm_blind
 
 		private void SubBgBlindUp()
 		{
-			SubBgBlind(Opacity + 0.1);
+			SubBgBlind(Opacity + 0.05);
 		}
 
 		private void SubBgBlindDown()
 		{
-			SubBgBlind(Opacity - 0.1);
+			SubBgBlind(Opacity - 0.05);
 		}
 	}
 }
