@@ -12,7 +12,7 @@ namespace iwm_blind
 {
 	public partial class Form1 : Form
 	{
-		///private const string Ver = "iwm20190908";
+		///private const string Ver = "iwm20191101";
 
 		public Form1()
 		{
@@ -32,7 +32,7 @@ namespace iwm_blind
 			ToolTip1.SetToolTip(
 				this,
 				"[マウスホイール] 暗さを調整\n" +
-				"[ダブルクリック] 巻き上げ／下げ\n" +
+				"[ダブルクリック] 最大化／元に戻す\n" +
 				"[右クリック] 閉じる"
 			);
 		}
@@ -72,25 +72,14 @@ namespace iwm_blind
 			}
 		}
 
-		private int GblHeightMax = 0;
-
 		private void Form1_DoubleClick(object sender, EventArgs e)
 		{
-			if (WindowState == FormWindowState.Maximized)
-			{
-				WindowState = FormWindowState.Normal;
-				return;
-			}
+			WindowState = WindowState == FormWindowState.Maximized ? FormWindowState.Normal : FormWindowState.Maximized;
+		}
 
-			if (Height > MinimumSize.Height)
-			{
-				GblHeightMax = Height;
-				Height = MinimumSize.Height;
-			}
-			else
-			{
-				Height = GblHeightMax;
-			}
+		private void Cms1_閉じる_Click(object sender, EventArgs e)
+		{
+			Close();
 		}
 
 		private void Cms1_背景色_Click(object sender, EventArgs e)
@@ -108,16 +97,6 @@ namespace iwm_blind
 					BackColor = CD.Color;
 				}
 			}
-		}
-
-		private void Cms1_最大化_解除_Click(object sender, EventArgs e)
-		{
-			WindowState = WindowState == FormWindowState.Maximized ? FormWindowState.Normal : FormWindowState.Maximized;
-		}
-
-		private void Cms1_閉じる_Click(object sender, EventArgs e)
-		{
-			Close();
 		}
 
 		//-------
