@@ -98,6 +98,7 @@
 			this.TopMost = true;
 			this.Load += new System.EventHandler(this.Form1_Load);
 			this.DoubleClick += new System.EventHandler(this.Form1_DoubleClick);
+			this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseClick);
 			this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
 			this.MouseEnter += new System.EventHandler(this.Form1_MouseEnter);
 			this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);

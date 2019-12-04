@@ -12,7 +12,7 @@ namespace iwm_blind
 {
 	public partial class Form1 : Form
 	{
-		///private const string Ver = "iwm20191101";
+		///private const string Ver = "iwm20191204";
 
 		public Form1()
 		{
@@ -72,6 +72,11 @@ namespace iwm_blind
 			}
 		}
 
+		private void Form1_MouseClick(object sender, MouseEventArgs e)
+		{
+			Form1_MouseEnter(sender, e);
+		}
+
 		private void Form1_DoubleClick(object sender, EventArgs e)
 		{
 			WindowState = WindowState == FormWindowState.Maximized ? FormWindowState.Normal : FormWindowState.Maximized;
@@ -106,13 +111,14 @@ namespace iwm_blind
 			double level = 0.5
 		)
 		{
+			// 無限ループにしない
 			if (level > 1.01)
 			{
-				level = 0.1;
+				level = 1.0;
 			}
 			else if (level < 0.1)
 			{
-				level = 1.0;
+				level = 0.1;
 			}
 
 			Opacity = level;
