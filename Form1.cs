@@ -89,7 +89,7 @@ namespace iwm_blind
 
 		private void Cms1_背景色_Click(object sender, EventArgs e)
 		{
-			using (ColorDialog CD = new ColorDialog
+			using (ColorDialog cd = new ColorDialog
 			{
 				Color = BackColor,
 				AllowFullOpen = true,
@@ -97,9 +97,9 @@ namespace iwm_blind
 				CustomColors = new int[] { }
 			})
 			{
-				if (CD.ShowDialog() == DialogResult.OK)
+				if (cd.ShowDialog() == DialogResult.OK)
 				{
-					BackColor = CD.Color;
+					BackColor = cd.Color;
 				}
 			}
 		}

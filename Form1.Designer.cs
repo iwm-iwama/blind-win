@@ -34,7 +34,6 @@
 			this.Cms1_L2 = new System.Windows.Forms.ToolStripSeparator();
 			this.Cms1_背景色 = new System.Windows.Forms.ToolStripMenuItem();
 			this.ToolTip1 = new System.Windows.Forms.ToolTip(this.components);
-			this.ColorDialog1 = new System.Windows.Forms.ColorDialog();
 			this.Cms1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -114,6 +113,5 @@
 		private System.Windows.Forms.ToolTip ToolTip1;
 		private System.Windows.Forms.ToolStripMenuItem Cms1_背景色;
 		private System.Windows.Forms.ToolStripSeparator Cms1_L2;
-		private System.Windows.Forms.ColorDialog ColorDialog1;
 	}
 }
