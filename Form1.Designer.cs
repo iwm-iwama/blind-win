@@ -29,9 +29,9 @@
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
 			this.Cms1 = new System.Windows.Forms.ContextMenuStrip(this.components);
 			this.Cms1_閉じる = new System.Windows.Forms.ToolStripMenuItem();
-			this.Cms1_L2 = new System.Windows.Forms.ToolStripSeparator();
 			this.Cms1_背景色 = new System.Windows.Forms.ToolStripMenuItem();
 			this.ToolTip1 = new System.Windows.Forms.ToolTip(this.components);
 			this.Cms1.SuspendLayout();
@@ -42,32 +42,29 @@
 			this.Cms1.BackColor = System.Drawing.Color.White;
 			this.Cms1.Font = new System.Drawing.Font("Yu Gothic UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
 			this.Cms1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.Cms1_閉じる,
-            this.Cms1_L2,
-            this.Cms1_背景色});
+            this.Cms1_背景色,
+            this.Cms1_閉じる});
 			this.Cms1.Name = "contextMenuStrip1";
-			this.Cms1.Size = new System.Drawing.Size(123, 54);
+			this.Cms1.Size = new System.Drawing.Size(111, 48);
 			// 
 			// Cms1_閉じる
 			// 
-			this.Cms1_閉じる.BackColor = System.Drawing.Color.White;
+			this.Cms1_閉じる.BackColor = System.Drawing.Color.DimGray;
 			this.Cms1_閉じる.Font = new System.Drawing.Font("Yu Gothic UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-			this.Cms1_閉じる.ForeColor = System.Drawing.SystemColors.ControlText;
+			this.Cms1_閉じる.ForeColor = System.Drawing.Color.White;
+			this.Cms1_閉じる.Image = ((System.Drawing.Image)(resources.GetObject("Cms1_閉じる.Image")));
 			this.Cms1_閉じる.Name = "Cms1_閉じる";
-			this.Cms1_閉じる.Size = new System.Drawing.Size(122, 22);
+			this.Cms1_閉じる.Size = new System.Drawing.Size(180, 22);
 			this.Cms1_閉じる.Text = "閉じる";
 			this.Cms1_閉じる.Click += new System.EventHandler(this.Cms1_閉じる_Click);
 			// 
-			// Cms1_L2
-			// 
-			this.Cms1_L2.Name = "Cms1_L2";
-			this.Cms1_L2.Size = new System.Drawing.Size(119, 6);
-			// 
 			// Cms1_背景色
 			// 
+			this.Cms1_背景色.BackColor = System.Drawing.SystemColors.Control;
+			this.Cms1_背景色.Image = ((System.Drawing.Image)(resources.GetObject("Cms1_背景色.Image")));
 			this.Cms1_背景色.Name = "Cms1_背景色";
-			this.Cms1_背景色.Size = new System.Drawing.Size(122, 22);
-			this.Cms1_背景色.Text = "■背景色";
+			this.Cms1_背景色.Size = new System.Drawing.Size(110, 22);
+			this.Cms1_背景色.Text = "背景色";
 			this.Cms1_背景色.Click += new System.EventHandler(this.Cms1_背景色_Click);
 			// 
 			// ToolTip1
@@ -93,7 +90,7 @@
 			this.ShowIcon = false;
 			this.ShowInTaskbar = false;
 			this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
-			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+			this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
 			this.TopMost = true;
 			this.Load += new System.EventHandler(this.Form1_Load);
 			this.DoubleClick += new System.EventHandler(this.Form1_DoubleClick);
@@ -112,6 +109,5 @@
 		private System.Windows.Forms.ToolStripMenuItem Cms1_閉じる;
 		private System.Windows.Forms.ToolTip ToolTip1;
 		private System.Windows.Forms.ToolStripMenuItem Cms1_背景色;
-		private System.Windows.Forms.ToolStripSeparator Cms1_L2;
 	}
 }

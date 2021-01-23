@@ -6,7 +6,7 @@ namespace iwm_blind
 {
 	public partial class Form1 : Form
 	{
-		///private const string Ver = "iwm20191204";
+		/// private const string Ver = "iwm20210123";
 
 		public Form1()
 		{
@@ -18,6 +18,12 @@ namespace iwm_blind
 
 		private void Form1_Load(object sender, EventArgs e)
 		{
+			StartPosition = FormStartPosition.Manual;
+			DesktopLocation = new Point(
+				(Screen.PrimaryScreen.Bounds.Width - Width) / 2,
+				30
+			);
+
 			SubBgBlind();
 		}
 
@@ -25,7 +31,7 @@ namespace iwm_blind
 		{
 			ToolTip1.SetToolTip(
 				this,
-				"[マウスホイール] 暗さを調整\n" +
+				"[マウスホイール] 透過度を調整\n" +
 				"[ダブルクリック] 最大化／元に戻す\n" +
 				"[右クリック] 閉じる"
 			);
@@ -44,7 +50,7 @@ namespace iwm_blind
 				SubBgBlindDown();
 			}
 
-			ToolTip1.SetToolTip(this, (Opacity * 100) + "%");
+			ToolTip1.SetToolTip(this, "不透過" + (Opacity * 100) + "%");
 		}
 
 		private Point MousePoint;
