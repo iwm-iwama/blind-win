@@ -1,4 +1,4 @@
-﻿namespace iwm_blind
+﻿namespace iwm_Blind
 {
 	partial class Form1
 	{

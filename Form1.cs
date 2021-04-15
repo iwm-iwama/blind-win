@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace iwm_blind
+namespace iwm_Blind
 {
 	public partial class Form1 : Form
 	{

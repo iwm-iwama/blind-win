@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace iwm_blind
+namespace iwm_Blind
 {
 	static class Program
 	{
