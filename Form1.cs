@@ -6,7 +6,7 @@ namespace iwm_Blind
 {
 	public partial class Form1 : Form
 	{
-		/// private const string Ver = "iwm20210123";
+		/// private const string Ver = "iwm20210529";
 
 		public Form1()
 		{
@@ -19,10 +19,7 @@ namespace iwm_Blind
 		private void Form1_Load(object sender, EventArgs e)
 		{
 			StartPosition = FormStartPosition.Manual;
-			DesktopLocation = new Point(
-				(Screen.PrimaryScreen.Bounds.Width - Width) / 2,
-				30
-			);
+			Form1_StartPosition();
 
 			SubBgBlind();
 		}
@@ -82,9 +79,38 @@ namespace iwm_Blind
 			WindowState = WindowState == FormWindowState.Maximized ? FormWindowState.Normal : FormWindowState.Maximized;
 		}
 
-		private void Cms1_閉じる_Click(object sender, EventArgs e)
+		private void Form1_StartPosition()
 		{
-			Close();
+			int WorkingAreaW = Screen.PrimaryScreen.WorkingArea.Width;
+			int WorkingAreaH = Screen.PrimaryScreen.WorkingArea.Height;
+
+			int WorkingAreaX = Screen.PrimaryScreen.WorkingArea.X;
+			int WorkingAreaY = Screen.PrimaryScreen.WorkingArea.Y;
+
+			int MouseX = Cursor.Position.X;
+			int MouseY = Cursor.Position.Y;
+
+			// X = Width
+			if (WorkingAreaW < MouseX + Size.Width)
+			{
+				MouseX -= Size.Width;
+				if (MouseX < 0)
+				{
+					MouseX = WorkingAreaX + 10;
+				}
+			}
+
+			// Y = Height
+			if (WorkingAreaH < MouseY + Size.Height)
+			{
+				MouseY -= Size.Height;
+				if (MouseY < 0)
+				{
+					MouseY = WorkingAreaY + 10;
+				}
+			}
+
+			Location = new Point(MouseX, MouseY);
 		}
 
 		private void Cms1_背景色_Click(object sender, EventArgs e)
@@ -102,6 +128,11 @@ namespace iwm_Blind
 					BackColor = cd.Color;
 				}
 			}
+		}
+
+		private void Cms1_閉じる_Click(object sender, EventArgs e)
+		{
+			Close();
 		}
 
 		//-------
