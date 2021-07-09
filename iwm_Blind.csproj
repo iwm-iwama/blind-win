@@ -33,6 +33,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
+  </PropertyGroup>
+  <PropertyGroup>
     <ApplicationIcon>iwm_Blind.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
