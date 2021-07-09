@@ -19,7 +19,7 @@ namespace iwm_Blind
 		private void Form1_Load(object sender, EventArgs e)
 		{
 			StartPosition = FormStartPosition.Manual;
-			Form1_StartPosition();
+			SubForm1_StartPosition();
 
 			SubBgBlind();
 		}
@@ -79,7 +79,7 @@ namespace iwm_Blind
 			WindowState = WindowState == FormWindowState.Maximized ? FormWindowState.Normal : FormWindowState.Maximized;
 		}
 
-		private void Form1_StartPosition()
+		private void SubForm1_StartPosition()
 		{
 			int WorkingAreaW = Screen.PrimaryScreen.WorkingArea.Width;
 			int WorkingAreaH = Screen.PrimaryScreen.WorkingArea.Height;
