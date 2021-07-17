@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Drawing;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace iwm_Blind
 {
 	public partial class Form1 : Form
 	{
-		/// private const string Ver = "iwm20210529";
+		/// private const string Ver = "iwm20210713";
 
 		public Form1()
 		{
@@ -21,6 +22,10 @@ namespace iwm_Blind
 			StartPosition = FormStartPosition.Manual;
 			SubForm1_StartPosition();
 
+			TopMost = true;
+			ShowInTaskbar = false;
+			Show();
+
 			SubBgBlind();
 		}
 
@@ -29,7 +34,7 @@ namespace iwm_Blind
 			ToolTip1.SetToolTip(
 				this,
 				"[マウスホイール] 透過度を調整\n" +
-				"[ダブルクリック] 最大化／元に戻す\n" +
+				"[ダブルクリック] 一瞬だけ背景を表示／コントロール移動\n" +
 				"[右クリック] 閉じる"
 			);
 		}
@@ -69,14 +74,14 @@ namespace iwm_Blind
 			}
 		}
 
-		private void Form1_MouseClick(object sender, MouseEventArgs e)
-		{
-			Form1_MouseEnter(sender, e);
-		}
-
 		private void Form1_DoubleClick(object sender, EventArgs e)
 		{
-			WindowState = WindowState == FormWindowState.Maximized ? FormWindowState.Normal : FormWindowState.Maximized;
+			FormWindowState ws = WindowState;
+			TopMost = false;
+			WindowState = FormWindowState.Minimized;
+			Thread.Sleep(1000);
+			TopMost = true;
+			WindowState = ws;
 		}
 
 		private void SubForm1_StartPosition()
@@ -111,6 +116,16 @@ namespace iwm_Blind
 			}
 
 			Location = new Point(MouseX, MouseY);
+		}
+
+		private void Cms1_最大化_Click(object sender, EventArgs e)
+		{
+			WindowState = FormWindowState.Maximized;
+		}
+
+		private void Cms1_元に戻す_Click(object sender, EventArgs e)
+		{
+			WindowState = FormWindowState.Normal;
 		}
 
 		private void Cms1_背景色_Click(object sender, EventArgs e)

@@ -121,6 +121,36 @@
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="Cms1_最大化.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAe
+        wQAAHsEBw2lUUwAAAAd0SU1FB9cJGxQSDCOKA4wAAAIGSURBVDhPnZP/TxJhHMfvv7j/JgMliJESosCB
+        HN8C04PEkzbXdC3cmoRmiWuOvlkgWHFlhwxnTFoS2frFtbn+CH7hL3j3PNfuBLva6rb37u5zz+v1eb7s
+        mLn2JGjEzzHMtqJIfroGcjF6idZ8iFS9CL33IPDWDX9lHIpg58cWSqdP/wrTEJiNVXnkvqxg43gVvldO
+        MLRz8fSJIrn7dRGJZljShWWOCe16uouNmwq81sqAKzvAzB5FkWpNI/stjfzJQ10JgVkVXm9nIdbi8JQc
+        cBXtYGbItG98jLDxw3CXSgrf81hq38L0h4AmCe56OguNVC+sfBt7MXzWRWgEGSpZPr6NO0fzuL7P19Vv
+        vOSSU/UExD1Bg9VoDzREwk4dBDqT+365t07j3Rmtn4dp+l7+J7rFf8lvBbJeaeLNmLZ+NfbHVnl409Kx
+        PTKzvfW+QRQWawKS1Sm6Wdo+jOSt9UiJR6wcgnXD1CUSjWHCMkfuZ3CmuYS5vQRcBXtHHXRl0yIFixOY
+        l1MIF3hFYlkfYs0PBskZv3ODwOR8f8FiVaBwl5xx31Qv50yS/zmnSWw5M0z3DaQz+SEyzTSWD9O9sAbq
+        SUQpgZmKgKGVi2B8r50KnD5YgHfbCedWf+fzubRmRLISVyTG7AAYrjwK9/ZVjL8coTAcz2xk3J9h06oB
+        g6Sz8d4ADJkL+AncQKRGiATjMwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="Cms1_元に戻す.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAe
+        wQAAHsEBw2lUUwAAAAd0SU1FB9cLBgsnHFPF6TEAAAIiSURBVDhPnZBtU1JBGIb3X5yfo2GooSES8ibv
+        oECpiNAQNTk2Jk4CjpmFTQ5mUSbWCTozdoiMlElmnOzlS7+CL/yC291FTjA149SH5+yevfe6dvchAEi0
+        FpAiR/76zJdxgf2fV553FtH11iyzOYPl5Lc7WPmeQLg61ggd+sjUZ+8f0PierQkXLWK8HEasFIItb5AI
+        PVlcOpnD9q8sUl/nETkMgkoEKqH7FRg+ycpg3ChPY62Wxs0PEVhf6et8w3R1TFw8nsX6yTI2f2a4ZOKT
+        RxFQGAx+UEthoXIb8dIMLNv6humFTuAbWE1WvBx++mOdj9c+uhSB+wxePUohXV2EI28Cg1l2BnvIxL67
+        QxIsORWBUzR1wjkdGXmm5Rn/sKISUAmull0IlBzwv7fT5WZm3x3B6M4Vdm0Gg8JKpgj+t/66+C+lTLy0
+        06xZ7L321/TKeQNdbmbD2QHoNjTQPu7HYKYPmodqJWvBrNPEV7Bh6eAukgcJ/t7WpqEnGszuxRGXohym
+        EkLH3wJ3wSy0w4n9Od6sluAyPTkmRTokrYzD9NqNmBzGLTmqwO2dHnjUC21GwyWBHS8cW1b03VeJXOB8
+        Y6wz+F5lHlPFQAsm+s1BRXBpTQ0qIUziyTlxvRDGaNaEi+lukdh2DVJICmKy6IcxN8StFOZge1EJ6V/t
+        EXpXVA3Xlg3WDSNUqS6Zh+aXw7LxeRM+r9TLF4SedHddleySAJBTAVSTo8lkxuIAAAAASUVORK5CYII=
+</value>
+  </data>
   <data name="Cms1_背景色.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAPCAYAAADtc08vAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAe

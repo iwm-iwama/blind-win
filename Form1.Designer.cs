@@ -31,8 +31,10 @@
 			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
 			this.Cms1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-			this.Cms1_閉じる = new System.Windows.Forms.ToolStripMenuItem();
+			this.Cms1_最大化 = new System.Windows.Forms.ToolStripMenuItem();
+			this.Cms1_元に戻す = new System.Windows.Forms.ToolStripMenuItem();
 			this.Cms1_背景色 = new System.Windows.Forms.ToolStripMenuItem();
+			this.Cms1_閉じる = new System.Windows.Forms.ToolStripMenuItem();
 			this.ToolTip1 = new System.Windows.Forms.ToolTip(this.components);
 			this.Cms1.SuspendLayout();
 			this.SuspendLayout();
@@ -42,14 +44,41 @@
 			this.Cms1.BackColor = System.Drawing.Color.White;
 			this.Cms1.Font = new System.Drawing.Font("Yu Gothic UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
 			this.Cms1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.Cms1_最大化,
+            this.Cms1_元に戻す,
             this.Cms1_背景色,
             this.Cms1_閉じる});
 			this.Cms1.Name = "contextMenuStrip1";
-			this.Cms1.Size = new System.Drawing.Size(111, 48);
+			this.Cms1.Size = new System.Drawing.Size(181, 114);
+			// 
+			// Cms1_最大化
+			// 
+			this.Cms1_最大化.Image = ((System.Drawing.Image)(resources.GetObject("Cms1_最大化.Image")));
+			this.Cms1_最大化.Name = "Cms1_最大化";
+			this.Cms1_最大化.Size = new System.Drawing.Size(180, 22);
+			this.Cms1_最大化.Text = "最大化";
+			this.Cms1_最大化.Click += new System.EventHandler(this.Cms1_最大化_Click);
+			// 
+			// Cms1_元に戻す
+			// 
+			this.Cms1_元に戻す.Image = ((System.Drawing.Image)(resources.GetObject("Cms1_元に戻す.Image")));
+			this.Cms1_元に戻す.Name = "Cms1_元に戻す";
+			this.Cms1_元に戻す.Size = new System.Drawing.Size(180, 22);
+			this.Cms1_元に戻す.Text = "元に戻す";
+			this.Cms1_元に戻す.Click += new System.EventHandler(this.Cms1_元に戻す_Click);
+			// 
+			// Cms1_背景色
+			// 
+			this.Cms1_背景色.BackColor = System.Drawing.Color.LightYellow;
+			this.Cms1_背景色.Image = ((System.Drawing.Image)(resources.GetObject("Cms1_背景色.Image")));
+			this.Cms1_背景色.Name = "Cms1_背景色";
+			this.Cms1_背景色.Size = new System.Drawing.Size(180, 22);
+			this.Cms1_背景色.Text = "背景色";
+			this.Cms1_背景色.Click += new System.EventHandler(this.Cms1_背景色_Click);
 			// 
 			// Cms1_閉じる
 			// 
-			this.Cms1_閉じる.BackColor = System.Drawing.Color.DimGray;
+			this.Cms1_閉じる.BackColor = System.Drawing.Color.Gray;
 			this.Cms1_閉じる.Font = new System.Drawing.Font("Yu Gothic UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
 			this.Cms1_閉じる.ForeColor = System.Drawing.Color.White;
 			this.Cms1_閉じる.Image = ((System.Drawing.Image)(resources.GetObject("Cms1_閉じる.Image")));
@@ -57,15 +86,6 @@
 			this.Cms1_閉じる.Size = new System.Drawing.Size(180, 22);
 			this.Cms1_閉じる.Text = "閉じる";
 			this.Cms1_閉じる.Click += new System.EventHandler(this.Cms1_閉じる_Click);
-			// 
-			// Cms1_背景色
-			// 
-			this.Cms1_背景色.BackColor = System.Drawing.SystemColors.Control;
-			this.Cms1_背景色.Image = ((System.Drawing.Image)(resources.GetObject("Cms1_背景色.Image")));
-			this.Cms1_背景色.Name = "Cms1_背景色";
-			this.Cms1_背景色.Size = new System.Drawing.Size(110, 22);
-			this.Cms1_背景色.Text = "背景色";
-			this.Cms1_背景色.Click += new System.EventHandler(this.Cms1_背景色_Click);
 			// 
 			// ToolTip1
 			// 
@@ -94,7 +114,6 @@
 			this.TopMost = true;
 			this.Load += new System.EventHandler(this.Form1_Load);
 			this.DoubleClick += new System.EventHandler(this.Form1_DoubleClick);
-			this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseClick);
 			this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
 			this.MouseEnter += new System.EventHandler(this.Form1_MouseEnter);
 			this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
@@ -109,5 +128,7 @@
 		private System.Windows.Forms.ToolStripMenuItem Cms1_閉じる;
 		private System.Windows.Forms.ToolTip ToolTip1;
 		private System.Windows.Forms.ToolStripMenuItem Cms1_背景色;
+		private System.Windows.Forms.ToolStripMenuItem Cms1_最大化;
+		private System.Windows.Forms.ToolStripMenuItem Cms1_元に戻す;
 	}
 }
