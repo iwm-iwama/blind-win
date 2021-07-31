@@ -49,13 +49,13 @@
             this.Cms1_背景色,
             this.Cms1_閉じる});
 			this.Cms1.Name = "contextMenuStrip1";
-			this.Cms1.Size = new System.Drawing.Size(181, 114);
+			this.Cms1.Size = new System.Drawing.Size(118, 92);
 			// 
 			// Cms1_最大化
 			// 
 			this.Cms1_最大化.Image = ((System.Drawing.Image)(resources.GetObject("Cms1_最大化.Image")));
 			this.Cms1_最大化.Name = "Cms1_最大化";
-			this.Cms1_最大化.Size = new System.Drawing.Size(180, 22);
+			this.Cms1_最大化.Size = new System.Drawing.Size(117, 22);
 			this.Cms1_最大化.Text = "最大化";
 			this.Cms1_最大化.Click += new System.EventHandler(this.Cms1_最大化_Click);
 			// 
@@ -63,7 +63,7 @@
 			// 
 			this.Cms1_元に戻す.Image = ((System.Drawing.Image)(resources.GetObject("Cms1_元に戻す.Image")));
 			this.Cms1_元に戻す.Name = "Cms1_元に戻す";
-			this.Cms1_元に戻す.Size = new System.Drawing.Size(180, 22);
+			this.Cms1_元に戻す.Size = new System.Drawing.Size(117, 22);
 			this.Cms1_元に戻す.Text = "元に戻す";
 			this.Cms1_元に戻す.Click += new System.EventHandler(this.Cms1_元に戻す_Click);
 			// 
@@ -72,7 +72,7 @@
 			this.Cms1_背景色.BackColor = System.Drawing.Color.LightYellow;
 			this.Cms1_背景色.Image = ((System.Drawing.Image)(resources.GetObject("Cms1_背景色.Image")));
 			this.Cms1_背景色.Name = "Cms1_背景色";
-			this.Cms1_背景色.Size = new System.Drawing.Size(180, 22);
+			this.Cms1_背景色.Size = new System.Drawing.Size(117, 22);
 			this.Cms1_背景色.Text = "背景色";
 			this.Cms1_背景色.Click += new System.EventHandler(this.Cms1_背景色_Click);
 			// 
@@ -83,7 +83,7 @@
 			this.Cms1_閉じる.ForeColor = System.Drawing.Color.White;
 			this.Cms1_閉じる.Image = ((System.Drawing.Image)(resources.GetObject("Cms1_閉じる.Image")));
 			this.Cms1_閉じる.Name = "Cms1_閉じる";
-			this.Cms1_閉じる.Size = new System.Drawing.Size(180, 22);
+			this.Cms1_閉じる.Size = new System.Drawing.Size(117, 22);
 			this.Cms1_閉じる.Text = "閉じる";
 			this.Cms1_閉じる.Click += new System.EventHandler(this.Cms1_閉じる_Click);
 			// 
