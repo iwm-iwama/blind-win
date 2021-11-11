@@ -20,7 +20,7 @@ namespace iwm_Blind
 		private void Form1_Load(object sender, EventArgs e)
 		{
 			StartPosition = FormStartPosition.Manual;
-			SubForm1_StartPosition();
+			SubFormStartPosition();
 
 			TopMost = true;
 			ShowInTaskbar = false;
@@ -84,7 +84,7 @@ namespace iwm_Blind
 			WindowState = ws;
 		}
 
-		private void SubForm1_StartPosition()
+		private void SubFormStartPosition()
 		{
 			int WorkingAreaW = Screen.PrimaryScreen.WorkingArea.Width;
 			int WorkingAreaH = Screen.PrimaryScreen.WorkingArea.Height;
@@ -150,9 +150,6 @@ namespace iwm_Blind
 			Close();
 		}
 
-		//-------
-		// 関数
-		//-------
 		private void SubBgBlind(
 			double level = 0.5
 		)
@@ -178,6 +175,20 @@ namespace iwm_Blind
 		private void SubBgBlindDown()
 		{
 			SubBgBlind(Opacity - 0.05);
+		}
+
+		private static class Program
+		{
+			/// <summary>
+			/// アプリケーションのメイン エントリ ポイントです。
+			/// </summary>
+			[STAThread]
+			private static void Main()
+			{
+				Application.EnableVisualStyles();
+				Application.SetCompatibleTextRenderingDefault(false);
+				Application.Run(new Form1());
+			}
 		}
 	}
 }
