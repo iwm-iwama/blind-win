@@ -7,7 +7,7 @@ namespace iwm_Blind
 {
 	public partial class Form1 : Form
 	{
-		/// private const string Ver = "iwm20210713";
+		/// private const string Ver = "iwm20220206";
 
 		public Form1()
 		{
@@ -31,7 +31,7 @@ namespace iwm_Blind
 
 		private void Form1_MouseEnter(object sender, EventArgs e)
 		{
-			ToolTip1.SetToolTip(
+			ToolTip.SetToolTip(
 				this,
 				"[マウスホイール] 透過度を調整\n" +
 				"[ダブルクリック] 一瞬だけ背景を表示／コントロール移動\n" +
@@ -52,7 +52,7 @@ namespace iwm_Blind
 				SubBgBlindDown();
 			}
 
-			ToolTip1.SetToolTip(this, "不透過" + (Opacity * 100) + "%");
+			ToolTip.SetToolTip(this, "不透過" + (Opacity * 100) + "%");
 		}
 
 		private Point MousePoint;
@@ -86,49 +86,20 @@ namespace iwm_Blind
 
 		private void SubFormStartPosition()
 		{
-			int WorkingAreaW = Screen.PrimaryScreen.WorkingArea.Width;
-			int WorkingAreaH = Screen.PrimaryScreen.WorkingArea.Height;
-
-			int WorkingAreaX = Screen.PrimaryScreen.WorkingArea.X;
-			int WorkingAreaY = Screen.PrimaryScreen.WorkingArea.Y;
-
-			int MouseX = Cursor.Position.X;
-			int MouseY = Cursor.Position.Y;
-
-			// X = Width
-			if (WorkingAreaW < MouseX + Size.Width)
-			{
-				MouseX -= Size.Width;
-				if (MouseX < 0)
-				{
-					MouseX = WorkingAreaX + 10;
-				}
-			}
-
-			// Y = Height
-			if (WorkingAreaH < MouseY + Size.Height)
-			{
-				MouseY -= Size.Height;
-				if (MouseY < 0)
-				{
-					MouseY = WorkingAreaY + 10;
-				}
-			}
-
-			Location = new Point(MouseX, MouseY);
+			Location = new Point(Cursor.Position.X - (Width / 2), Cursor.Position.Y - (SystemInformation.CaptionHeight / 2));
 		}
 
-		private void Cms1_最大化_Click(object sender, EventArgs e)
+		private void Cms_最大化_Click(object sender, EventArgs e)
 		{
 			WindowState = FormWindowState.Maximized;
 		}
 
-		private void Cms1_元に戻す_Click(object sender, EventArgs e)
+		private void Cms_元に戻す_Click(object sender, EventArgs e)
 		{
 			WindowState = FormWindowState.Normal;
 		}
 
-		private void Cms1_背景色_Click(object sender, EventArgs e)
+		private void Cms_背景色_Click(object sender, EventArgs e)
 		{
 			using (ColorDialog cd = new ColorDialog
 			{
@@ -145,7 +116,7 @@ namespace iwm_Blind
 			}
 		}
 
-		private void Cms1_閉じる_Click(object sender, EventArgs e)
+		private void Cms_閉じる_Click(object sender, EventArgs e)
 		{
 			Close();
 		}

@@ -117,11 +117,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="Cms1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="Cms.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="Cms1_最大化.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="Cms_最大化.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAe
         wQAAHsEBw2lUUwAAAAd0SU1FB9cJGxQSDCOKA4wAAAIGSURBVDhPnZP/TxJhHMfvv7j/JgMliJESosCB
@@ -136,7 +136,7 @@
         g6Sz8d4ADJkL+AncQKRGiATjMwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="Cms1_元に戻す.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="Cms_元に戻す.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAe
         wQAAHsEBw2lUUwAAAAd0SU1FB9cLBgsnHFPF6TEAAAIiSURBVDhPnZBtU1JBGIb3X5yfo2GooSES8ibv
@@ -151,7 +151,7 @@
         EXpXVA3Xlg3WDSNUqS6Zh+aXw7LxeRM+r9TLF4SedHddleySAJBTAVSTo8lkxuIAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="Cms1_背景色.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="Cms_背景色.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAPCAYAAADtc08vAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAe
         wQAAHsEBw2lUUwAAAAd0SU1FB9cJHRQFBXq+YGIAAAFASURBVDhPdZE/S8QwGIefDjo46eTu4q44+QUE
@@ -163,7 +163,7 @@
         rgAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="Cms1_閉じる.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="Cms_閉じる.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAe
         wQAAHsEBw2lUUwAAAAd0SU1FB9cKEAg5EMRmBW8AAAG/SURBVDhP1ZLrS9tQGIeDn8r+B3HIvhXRBcbQ
@@ -177,7 +177,7 @@
         iVWm63n2284AAAAASUVORK5CYII=
 </value>
   </data>
-  <metadata name="ToolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="ToolTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>99, 17</value>
   </metadata>
 </root>
