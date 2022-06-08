@@ -7,7 +7,7 @@ namespace iwm_Blind
 {
 	public partial class Form1 : Form
 	{
-		/// private const string Ver = "iwm20220413";
+		/// private const string Ver = "iwm20220607";
 
 		public Form1()
 		{
@@ -21,21 +21,21 @@ namespace iwm_Blind
 		{
 			StartPosition = FormStartPosition.Manual;
 			SubFormStartPosition();
+		}
 
-			TopMost = true;
-			ShowInTaskbar = false;
-			Show();
-
-			SubBgBlind();
+		private void Form1_Shown(object sender, EventArgs e)
+		{
+			Opacity = 0.5;
+			SubBgBlind(0);
 		}
 
 		private void Form1_MouseEnter(object sender, EventArgs e)
 		{
 			ToolTip.SetToolTip(
 				this,
-				"[マウスホイール] 透過度を調整\n" +
-				"[ダブルクリック] 一瞬だけ背景を表示／コントロール移動\n" +
-				"[右クリック] 閉じる"
+				"[マウスホイール] 透過率を変更\n" +
+				"[ダブルクリック] 一瞬だけ背景を表示\n" +
+				"[右クリック] 各種メニュー"
 			);
 		}
 
@@ -44,18 +44,19 @@ namespace iwm_Blind
 			// 上回転 +120
 			if (e.Delta > 0)
 			{
-				SubBgBlindUp();
+				SubBgBlind(10);
 			}
 			// 下回転 -120
 			else if (e.Delta < 0)
 			{
-				SubBgBlindDown();
+				SubBgBlind(-10);
 			}
 
-			ToolTip.SetToolTip(this, "不透過" + (Opacity * 100) + "%");
+			ToolTip.SetToolTip(this, $"透過率 {100 - (int)(Opacity * 100)}%");
 		}
 
-		private Point MousePoint;
+		private Point MousePoint = Point.Empty;
+		private bool MouseMoveOn = true;
 
 		private void Form1_MouseDown(object sender, MouseEventArgs e)
 		{
@@ -67,6 +68,11 @@ namespace iwm_Blind
 
 		private void Form1_MouseMove(object sender, MouseEventArgs e)
 		{
+			if (!MouseMoveOn)
+			{
+				return;
+			}
+
 			if ((e.Button & MouseButtons.Left) == MouseButtons.Left)
 			{
 				Left += e.X - MousePoint.X;
@@ -76,12 +82,9 @@ namespace iwm_Blind
 
 		private void Form1_DoubleClick(object sender, EventArgs e)
 		{
-			FormWindowState ws = WindowState;
-			TopMost = false;
-			WindowState = FormWindowState.Minimized;
+			Visible = false;
 			Thread.Sleep(1000);
-			TopMost = true;
-			WindowState = ws;
+			Visible = true;
 		}
 
 		private void SubFormStartPosition()
@@ -89,14 +92,31 @@ namespace iwm_Blind
 			Location = new Point(Cursor.Position.X - (Width / 2), Cursor.Position.Y - (SystemInformation.CaptionHeight / 2));
 		}
 
+		private int GblX = 0, GblY = 0, GblW = 0, GblH = 0;
+
 		private void Cms_最大化_Click(object sender, EventArgs e)
 		{
-			WindowState = FormWindowState.Maximized;
+			GblX = Left;
+			GblY = Top;
+			GblW = Width;
+			GblH = Height;
+
+			Left = SystemInformation.WorkingArea.Left;
+			Top = SystemInformation.WorkingArea.Top;
+			Width = SystemInformation.WorkingArea.Width;
+			Height = SystemInformation.WorkingArea.Height;
+
+			MouseMoveOn = false;
 		}
 
 		private void Cms_元に戻す_Click(object sender, EventArgs e)
 		{
-			WindowState = FormWindowState.Normal;
+			Left = GblX;
+			Top = GblY;
+			Width = GblW;
+			Height = GblH;
+
+			MouseMoveOn = true;
 		}
 
 		private void Cms_背景色_Click(object sender, EventArgs e)
@@ -118,34 +138,25 @@ namespace iwm_Blind
 
 		private void Cms_閉じる_Click(object sender, EventArgs e)
 		{
-			Close();
+			Application.Exit();
 		}
 
 		private void SubBgBlind(
-			double level = 0.5
+			int blindPerAdd
 		)
 		{
-			// 無限ループにしない
-			if (level > 1.01)
+			int iBlind = (int)(Opacity * 100) + blindPerAdd;
+
+			if (iBlind > 100)
 			{
-				level = 1.0;
+				iBlind = 100;
 			}
-			else if (level < 0.1)
+			else if (iBlind < 10)
 			{
-				level = 0.1;
+				iBlind = 10;
 			}
 
-			Opacity = level;
-		}
-
-		private void SubBgBlindUp()
-		{
-			SubBgBlind(Opacity + 0.05);
-		}
-
-		private void SubBgBlindDown()
-		{
-			SubBgBlind(Opacity - 0.05);
+			Opacity = iBlind / 100.0;
 		}
 
 		private static class Program
