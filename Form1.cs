@@ -7,7 +7,7 @@ namespace iwm_Blind
 {
 	public partial class Form1 : Form
 	{
-		/// private const string Ver = "iwm20220607";
+		/// private const string Ver = "iwm20220609";
 
 		public Form1()
 		{
@@ -20,7 +20,7 @@ namespace iwm_Blind
 		private void Form1_Load(object sender, EventArgs e)
 		{
 			StartPosition = FormStartPosition.Manual;
-			SubFormStartPosition();
+			Location = new Point(Cursor.Position.X - (Width / 2), Cursor.Position.Y - (SystemInformation.CaptionHeight / 2));
 		}
 
 		private void Form1_Shown(object sender, EventArgs e)
@@ -44,15 +44,33 @@ namespace iwm_Blind
 			// 上回転 +120
 			if (e.Delta > 0)
 			{
-				SubBgBlind(10);
+				SubBgBlind(-10);
 			}
 			// 下回転 -120
 			else if (e.Delta < 0)
 			{
-				SubBgBlind(-10);
+				SubBgBlind(10);
 			}
 
 			ToolTip.SetToolTip(this, $"透過率 {100 - (int)(Opacity * 100)}%");
+		}
+
+		private void SubBgBlind(
+			int blindPerAdd
+		)
+		{
+			int iBlind = (int)(Opacity * 100) + blindPerAdd;
+
+			if (iBlind > 100)
+			{
+				iBlind = 100;
+			}
+			else if (iBlind < 10)
+			{
+				iBlind = 10;
+			}
+
+			Opacity = iBlind / 100.0;
 		}
 
 		private Point MousePoint = Point.Empty;
@@ -85,11 +103,6 @@ namespace iwm_Blind
 			Visible = false;
 			Thread.Sleep(1000);
 			Visible = true;
-		}
-
-		private void SubFormStartPosition()
-		{
-			Location = new Point(Cursor.Position.X - (Width / 2), Cursor.Position.Y - (SystemInformation.CaptionHeight / 2));
 		}
 
 		private int GblX = 0, GblY = 0, GblW = 0, GblH = 0;
@@ -139,24 +152,6 @@ namespace iwm_Blind
 		private void Cms_閉じる_Click(object sender, EventArgs e)
 		{
 			Application.Exit();
-		}
-
-		private void SubBgBlind(
-			int blindPerAdd
-		)
-		{
-			int iBlind = (int)(Opacity * 100) + blindPerAdd;
-
-			if (iBlind > 100)
-			{
-				iBlind = 100;
-			}
-			else if (iBlind < 10)
-			{
-				iBlind = 10;
-			}
-
-			Opacity = iBlind / 100.0;
 		}
 
 		private static class Program
