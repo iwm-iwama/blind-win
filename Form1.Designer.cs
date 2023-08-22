@@ -131,9 +131,10 @@
 		}
 
 		#endregion
+
 		private System.Windows.Forms.ContextMenuStrip Cms;
-		private System.Windows.Forms.ToolStripMenuItem Cms_元に戻す;
 		private System.Windows.Forms.ToolStripMenuItem Cms_最大化;
+		private System.Windows.Forms.ToolStripMenuItem Cms_元に戻す;
 		private System.Windows.Forms.ToolStripMenuItem Cms_背景色;
 		private System.Windows.Forms.ToolStripMenuItem Cms_閉じる;
 		private System.Windows.Forms.ToolTip ToolTip;

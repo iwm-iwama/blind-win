@@ -7,7 +7,7 @@ namespace iwm_Blind
 {
 	public partial class Form1 : Form
 	{
-		/// private const string Ver = "iwm20220609";
+		/// private const string Ver = "iwm20230821";
 
 		public Form1()
 		{
@@ -25,7 +25,7 @@ namespace iwm_Blind
 
 		private void Form1_Shown(object sender, EventArgs e)
 		{
-			Opacity = 0.5;
+			Opacity = 1.0 - 0.3;
 			SubBgBlind(0);
 		}
 
@@ -74,7 +74,6 @@ namespace iwm_Blind
 		}
 
 		private Point MousePoint = Point.Empty;
-		private bool MouseMoveOn = true;
 
 		private void Form1_MouseDown(object sender, MouseEventArgs e)
 		{
@@ -86,11 +85,6 @@ namespace iwm_Blind
 
 		private void Form1_MouseMove(object sender, MouseEventArgs e)
 		{
-			if (!MouseMoveOn)
-			{
-				return;
-			}
-
 			if ((e.Button & MouseButtons.Left) == MouseButtons.Left)
 			{
 				Left += e.X - MousePoint.X;
@@ -106,20 +100,22 @@ namespace iwm_Blind
 		}
 
 		private int GblX = 0, GblY = 0, GblW = 0, GblH = 0;
+		private bool GblFormMax = false;
 
 		private void Cms_最大化_Click(object sender, EventArgs e)
 		{
-			GblX = Left;
-			GblY = Top;
-			GblW = Width;
-			GblH = Height;
-
-			Left = SystemInformation.WorkingArea.Left;
-			Top = SystemInformation.WorkingArea.Top;
-			Width = SystemInformation.WorkingArea.Width;
-			Height = SystemInformation.WorkingArea.Height;
-
-			MouseMoveOn = false;
+			if (!GblFormMax)
+			{
+				GblX = Left;
+				GblY = Top;
+				GblW = Width;
+				GblH = Height;
+			}
+			Left = SystemInformation.WorkingArea.Left - 8;
+			Top = SystemInformation.WorkingArea.Top - 8;
+			Width = SystemInformation.WorkingArea.Width + 16;
+			Height = SystemInformation.WorkingArea.Height + 16;
+			GblFormMax = true;
 		}
 
 		private void Cms_元に戻す_Click(object sender, EventArgs e)
@@ -128,8 +124,7 @@ namespace iwm_Blind
 			Top = GblY;
 			Width = GblW;
 			Height = GblH;
-
-			MouseMoveOn = true;
+			GblFormMax = false;
 		}
 
 		private void Cms_背景色_Click(object sender, EventArgs e)
