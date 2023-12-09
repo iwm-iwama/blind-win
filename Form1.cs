@@ -7,7 +7,8 @@ namespace iwm_Blind
 {
 	public partial class Form1 : Form
 	{
-		/// private const string Ver = "iwm20230821";
+		///private const string COPYRIGHT = "(C)2021-2023 iwm-iwama";
+		///private const string VERSION = "iwm_Blind_20230821";
 
 		public Form1()
 		{
