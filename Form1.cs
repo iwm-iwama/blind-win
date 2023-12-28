@@ -8,7 +8,7 @@ namespace iwm_Blind
 	public partial class Form1 : Form
 	{
 		///private const string COPYRIGHT = "(C)2021-2023 iwm-iwama";
-		///private const string VERSION = "iwm_Blind_20230821";
+		///private const string VERSION = "iwm_Blind_20231228";
 
 		public Form1()
 		{
@@ -20,8 +20,9 @@ namespace iwm_Blind
 
 		private void Form1_Load(object sender, EventArgs e)
 		{
-			StartPosition = FormStartPosition.Manual;
-			Location = new Point(Cursor.Position.X - (Width / 2), Cursor.Position.Y - (SystemInformation.CaptionHeight / 2));
+			StartPosition = FormStartPosition.CenterScreen;
+			///StartPosition = FormStartPosition.Manual;
+			///Location = new Point(Cursor.Position.X - (Width / 2), Cursor.Position.Y - (SystemInformation.CaptionHeight / 2));
 		}
 
 		private void Form1_Shown(object sender, EventArgs e)

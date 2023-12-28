@@ -142,14 +142,14 @@
   <data name="Cms_背景色.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGgSURBVDhPrZHPK4NxHMc/tTkoOSnMrwPKTWutaFsuiJSS
-        cRC1HIb8TJn5A5Qc3CgnuZCpNfZkxpgppHbAxZ4dWIrLWPbjGbU9fex5nu+2xzw1xatePfXt83pfHvg3
-        4vq5vrRMj6mSPP8epteEabkR/u0UVJFDaOAP8pE7gBaQMU64fXdAIuqC9YgbSsipNLkDzBGMMS7AjMcw
-        SU6lEQ98DI8YmEMIigbu0QsF5FQa8UBkSekUxRhzQSd3o6OpLp2fsqq83p9j6Tg6YMC3FQUrGrBrfPta
-        nY86S8XIS1MjJMuSHgjNVGF4RcHHGx5los1nucqEWZ+bnnYKSSrAxWFDNwYXAM9XG7H+ZAorLpZzQ9T4
-        7Y9amjKmfpOMpAIx/Sy+zBfzA92b7Sh3TGOzz5qNaVsgFQ+3uN1yknyH8l9HD2gHcuqPzVgzuIXq6htU
-        194l+9Wv92MK1jpezu6KJanAOSKuheLIfTuc21gnu8TWogCOliVxohwlJakAF+59JvmBCfMDGksTkpFY
-        kgp4EC2c7jhrWxxiT1IHlnyS9C8AfAGsfHgepWSZUAAAAABJRU5ErkJggg==
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGgSURBVDhPrZHPK4NxHMc/NQ5KTgrz64ByQ7MilgsitZJx
+        ELV22Mj8SGH+ACWH3SgnuZCpNfa0HzaGQmoHXOzZgaW40GTzjNqePvY8z3fbY56a4lWvnvr2eb0vD/wb
+        Mc3cYEqmf76CPP8eZmAeU3Ij/NsRKCIuqOcPcpE9gBaQMW64fnVAPOqF9YgPismpNNkDzAGMM17AtB6Y
+        JKfSiAc+dAYt44Jn0cAt+iGfnEojHogsN7lFMb57oZe7UdFUnypIWRV+/8+xVBwd1uKLWc6KBuxtgf12
+        VYA6TsbIS1MGkmVIDYRnKvHNLOfjjZPGeFfAcpEOMz62POwUkFSAi9+0anxeBDxdbcC6wyksP1vJDrEt
+        aL9vpyl98jfJSCrwrpnFp4UifkC92Y15zmlsDVgzMW0LJWNdh8+XR5LvUMHLqIN2IqfGY8LqkS1UVl1h
+        c81NYkj5cjsuZ60TZeyuWJIKnCLiWjiG3LfHvY21snPsLAzhWGkCjWUoKUkFuHDvM8EPGE13qC+JS0Zi
+        SSpwgmjh9MVY29Ioe5g8sOSSpH8B4Aug5HgZBIcqUgAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="Cms_閉じる.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
