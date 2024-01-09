@@ -7,8 +7,8 @@ namespace iwm_Blind
 {
 	public partial class Form1 : Form
 	{
-		///private const string COPYRIGHT = "(C)2021-2023 iwm-iwama";
-		///private const string VERSION = "iwm_Blind_20231228";
+		///private const string COPYRIGHT = "(C)2021-2024 iwm-iwama";
+		///private const string VERSION = "iwm_Blind_20240102";
 
 		public Form1()
 		{
@@ -146,7 +146,7 @@ namespace iwm_Blind
 			}
 		}
 
-		private void Cms_閉じる_Click(object sender, EventArgs e)
+		private void Cms_終了_Click(object sender, EventArgs e)
 		{
 			Application.Exit();
 		}
